@@ -56,7 +56,7 @@ O projeto também inclui um website dedicado. Este website contém informações
 - Utilização do Postman para envio de comandos e criação de entidades.
 - Utilização do dispositivo ESP32 para controle e comunicação.
 - Conexão com o sistema NTP.br para a exatidão do relógio.
-- Utilização do Postaman para comunicação de métodos POST PATCH do método MqTT
+- Utilização do Postman para comunicação de métodos POST PATCH do método HTTP
 
 
 ## Instruções de Uso ❗
@@ -68,8 +68,23 @@ O projeto também inclui um website dedicado. Este website contém informações
 - Aguardar alarmes ativados pelos médicos
 
 
-### Insntruções de Uso para Médicos 
-- Entrar no Postman 
+### Instruções de Uso para Médicos 
+- Acesse o FIWARE: Utilize o Postman para realizar operações no FIWARE, como adicionar novos pacientes, medicamentos e ajustar horários.
+  Para fazer isso, utilize o link abaixo ou salve a collection disponibilizada juntamente com o código-fonte.
+  Link: https://www.postman.com/winter-firefly-967108/workspace/global-solution/overview
+
+- Autenticação no FIWARE: Certifique-se de ter credenciais válidas para acessar o FIWARE. Use as informações fornecidas pelo sistema para autenticar suas solicitações.
+
+- Adição de Novos Pacientes:
+    -Crie uma Nova Entidade: Utilize o método POST no Postman para criar uma nova entidade no FIWARE. Inclua os detalhes do paciente e de seus medicamentos, como nome, dosagem e horário de administração.
+
+- Ajuste de Horários: Para modificar os horários dos medicamentos, utilize o método PATCH no Postman. Envie as atualizações necessárias para a entidade correspondente.
+
+Ajuste Dinâmico: Se necessário, ajuste dinamicamente os horários dos medicamentos com base nas necessidades específicas do paciente. Isso pode ser feito através de solicitações PATCH para as entidades apropriadas.
+
+Observação Importante:
+Certifique-se de lidar com informações confidenciais de maneira ética e segura.
+Monitore regularmente as notificações e respostas do sistema para garantir que os medicamentos sejam administrados corretamente.
 
 ##Equipe 
 - Gabriel Genaro - RM551986
