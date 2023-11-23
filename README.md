@@ -1,9 +1,9 @@
 # MediMate Watch - Senior Sync Tech 
 
-(![idoso](https://github.com/G3n4r00/MediMate-Watch/assets/126473193/82ebacb2-a3af-47eb-9837-208f303f9275))
+![idoso](https://github.com/G3n4r00/MediMate-Watch/assets/126473193/82ebacb2-a3af-47eb-9837-208f303f9275)
 
->Status: Protótipo Digital ⚙️>
->
+>Status: Protótipo Digital ⚙️
+
 
 ## Visão Geral
 
@@ -24,9 +24,10 @@ Nosso princinapl objetivo é levar tranquilidade à vida dos idosos, pensando pr
 
 - Fornecer Suporte Eficiente e Material de Instrução Claro: Oferecer suporte técnico acessível e eficaz para solucionar dúvidas ou problemas relacionados ao uso do MediMate Watch, além de disponibilizar um manual de instruções detalhado e um FAQ para facilitar o entendimento das funcionalidades do dispositivo.
 
+
 ## Foto do Protótipo Digital 
 
-(![image](https://github.com/G3n4r00/MediMate-Watch/assets/126473193/560b4db2-1ec2-4d24-954d-24de1b759b61))
+![image](https://github.com/G3n4r00/MediMate-Watch/assets/126473193/560b4db2-1ec2-4d24-954d-24de1b759b61)
 
 ## Equipamentos utilizados 🧰 : 
 
@@ -61,14 +62,14 @@ O projeto também inclui um website dedicado. Este website contém informações
 
 ## Instruções de Uso ❗
 
-### Instruções de Uso para Pacientes 👥:
+### Instruções de Uso para Pacientes 👴👵:
 - Ativar o relógio
 - Observar os horários
 - Conferir se tudo está corretamente ligado
 - Aguardar alarmes ativados pelos médicos
 
 
-### Instruções de Uso para Médicos 
+### Instruções de Uso para Médicos 👨‍⚕️👩‍⚕️
 - Acesse o FIWARE: Utilize o Postman para realizar operações no FIWARE, como adicionar novos pacientes, medicamentos e ajustar horários.
   Para fazer isso, utilize o link abaixo ou salve a collection disponibilizada juntamente com o código-fonte.
   Link: https://www.postman.com/winter-firefly-967108/workspace/global-solution/overview
@@ -80,12 +81,12 @@ O projeto também inclui um website dedicado. Este website contém informações
 
 - Ajuste de Horários: Para modificar os horários dos medicamentos, utilize o método PATCH no Postman. Envie as atualizações necessárias para a entidade correspondente.
 
-Ajuste Dinâmico: Se necessário, ajuste dinamicamente os horários dos medicamentos com base nas necessidades específicas do paciente. Isso pode ser feito através de solicitações PATCH para as entidades apropriadas.
+- Ajuste Dinâmico: Se necessário, ajuste dinamicamente os horários dos medicamentos com base nas necessidades específicas do paciente. Isso pode ser feito através de solicitações PATCH para as entidades apropriadas.
 
-Observação Importante:
-Certifique-se de lidar com informações confidenciais de maneira ética e segura.
-Monitore regularmente as notificações e respostas do sistema para garantir que os medicamentos sejam administrados corretamente.
+### Observação Importante:
+- Certifique-se de lidar com informações confidenciais de maneira ética e segura.
+  Monitore regularmente as notificações e respostas do sistema para garantir que os medicamentos sejam administrados corretamente.
 
-##Equipe 
+## Equipe 
 - Gabriel Genaro - RM551986
 - Paloma Mirela - RM551321
