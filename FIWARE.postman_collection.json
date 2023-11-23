@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "cb330a89-2f6a-47f5-99a0-96798446a6e0",
+		"name": "FIWARE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29373151",
+		"_collection_link": "https://www.postman.com/winter-firefly-967108/workspace/global-solution/collection/29373151-cb330a89-2f6a-47f5-99a0-96798446a6e0?action=share&source=collection_link&creator=29373151"
+	},
+	"item": [
+		{
+			"name": "Orion Context Broker",
+			"item": [
+				{
+					"name": "1.Health Check",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{url}}:1026/version",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "1026",
+							"path": [
+								"version"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2.Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "fiware-service",
+								"value": "smart",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"urn:ngsi-ld:entity:001\",\r\n  \"type\": \"iot\",\r\n  \"temperature\": {\r\n  \"type\": \"float\",\r\n  \"value\": 0\r\n    }\r\n,\r\n  \"humidity\": {\r\n  \"type\": \"float\",\r\n  \"value\": 0\r\n\t}\r\n}\r\n\r\n  \r\n"
+						},
+						"url": {
+							"raw": "http://{{url}}:1026/v2/entities",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "1026",
+							"path": [
+								"v2",
+								"entities"
+							]
+						},
+						"description": "cria entidade"
+					},
+					"response": []
+				},
+				{
+					"name": "3.Get ",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "fiware-service",
+								"type": "text",
+								"value": "smart"
+							},
+							{
+								"key": "fiware-servicepath",
+								"type": "text",
+								"value": "/"
+							}
+						],
+						"url": {
+							"raw": "http://{{url}}:1026/v2/entities",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "1026",
+							"path": [
+								"v2",
+								"entities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "4.Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "fiware-service",
+								"value": "smart",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"temperature\": {\r\n  \"type\": \"float\",\r\n  \"value\": 39\r\n    }\r\n,\r\n  \"humidity\": {\r\n  \"type\": \"float\",\r\n  \"value\": 60\r\n\t}\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://{{url}}:1026/v2/entities/urn:ngsi-ld:entity:001/attrs",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "1026",
+							"path": [
+								"v2",
+								"entities",
+								"urn:ngsi-ld:entity:001",
+								"attrs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "7.Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "fiware-service",
+								"value": "smart",
+								"type": "text"
+							},
+							{
+								"key": "fiware-servicepath",
+								"value": "/",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://{{url}}:1026/v2/entities/urn:ngsi-ld:entity:001",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "1026",
+							"path": [
+								"v2",
+								"entities",
+								"urn:ngsi-ld:entity:001"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "Thing",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criando a Entidade Paciente Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": \"paciente_4\",\r\n  \"type\": \"Paciente\",\r\n  \"nome\": {\r\n    \"type\": \"String\",\r\n    \"value\": \"Nome do Paciente\"\r\n  },\r\n  \"idade\": {\r\n    \"type\": \"Integer\",\r\n    \"value\": 70\r\n  },\r\n  \"medicamentos\": {\r\n    \"type\": \"Array\",\r\n    \"value\": [\r\n      {\r\n        \"nome\": \"Nome do Medicamento 1\",\r\n        \"horario\": \"13:00\",\r\n        \"dosagem\": \"1 comprimido\"\r\n      },\r\n      {\r\n        \"nome\": \"Nome do Medicamento 2\",\r\n        \"horario\": \"16:00\",\r\n        \"dosagem\": \"2 comprimidos\"\r\n      }\r\n    ]\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://{{url}}:1026/v2/entities",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "1026",
+							"path": [
+								"v2",
+								"entities"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criando Notificação",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"Lembrete de Medicamento\",\r\n  \"subject\": {\r\n    \"entities\": [\r\n      {\r\n        \"id\": \"paciente_3\",\r\n        \"type\": \"Paciente\"\r\n      }\r\n    ],\r\n    \"condition\": {\r\n      \"attrs\": [\"medicamentos\"]\r\n    }\r\n  },\r\n  \"notification\": {\r\n    \"http\": {\r\n      \"url\": \"http://{{url}}/notificacao-lembrete\"\r\n    },\r\n    \"attrs\": [\"medicamentos\"]\r\n  }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://{{url}}:1026/v2/subscriptions",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "1026",
+							"path": [
+								"v2",
+								"subscriptions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editando Informações",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"medicamentos\": {\r\n      \"type\": \"Array\",\r\n      \"value\": [\r\n        {\r\n          \"nome\": \"Captopril\",\r\n          \"horario\": \"13:15\",\r\n          \"dosagem\": \"1 comprimido\",\r\n          \"status\": \"pendente\"\r\n        },\r\n        {\r\n          \"nome\": \"Diazepam\",\r\n          \"horario\": \"21:30\",\r\n          \"dosagem\": \"2 comprimidos\",\r\n          \"status\": \"pendente\"\r\n        }\r\n      ]\r\n    }\r\n  }"
+						},
+						"url": {
+							"raw": "http://{{url}}:1026/v2/entities/paciente_5/attrs",
+							"protocol": "http",
+							"host": [
+								"{{url}}"
+							],
+							"port": "1026",
+							"path": [
+								"v2",
+								"entities",
+								"paciente_5",
+								"attrs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

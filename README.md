@@ -47,9 +47,13 @@ O proejto funciona como um relógio comum para que os idosos possam consultar a 
 Entretanto a parte especial do projeto é a conexão via Http utilizando FIWARE para registrar horários em que o alarme deve ser ativado, sendo possível adicionar medicamentos ou modificar horários, sendo possível os médicos controlarem e preescreverem os remédios à distância
 O MediMate Watch visa essa conexão onde o médico pode adicionar novos medicamentos aos pacientes sem que o paciente tenha de se deslocar até a consulta, o alarme será ativada no horário correto exibindo o nome do remédio e sua dosagem, facilitando ao máximo a vida dos pacientes idosos 
 
+### Link para o Vídeo Demonstrativo: https://www.youtube.com/watch?v=M_28V7sqzqE
+
 ## Website 🌐
 
-O projeto também inclui um website dedicado. Este website contém informações soobre o projeto adicionais que permitem que mais pessoas conheçam o MediMate Watch, e ainda tem informações adicionais para aqueles que já connhecem nosso produto
+O projeto também inclui um website dedicado. Este website contém informações soobre o projeto adicionais que permitem que mais pessoas conheçam o MediMate Watch, e ainda tem informações adicionais para aqueles que já connhecem nosso produto.
+
+### Link para o repositório da página: https://github.com/PalomaRodrigues33/global-solution-web-front
 
 ## Requisitos do Sistema ⚠️
 
